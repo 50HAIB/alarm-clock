@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=c439952d-6c0c-48d0-85c0-ed8b01d929bb
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="hosting-provider" content="Netlify">
+<meta name="netlify-deploy" content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=c439952d-6c0c-48d0-85c0-ed8b01d929bb">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm Clock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="clock-container">
+    <h1>Alarm Clock</h1>
+    <div class="time-display" id="currentTime">00:00:00 AM</div>
+    <div class="alarm-settings">
+      <label for="alarmTime">Set Alarm:</label>
+      <input type="time" id="alarmTime">
+      <button id="setAlarmBtn">Set Alarm</button>
+      <button id="clearAlarmBtn">Clear Alarm</button>
+    </div>
+    <p id="alarmMessage" class="hidden">Alarm Set!</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="c439952d-6c0c-48d0-85c0-ed8b01d929bb" data-app-host="app.netlify.com"></script>

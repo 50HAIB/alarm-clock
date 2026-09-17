@@ -1,0 +1,143 @@
+/* Base Reset & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top left, #1a1c29, #0e1017);
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Glassmorphism Container */
+  .clock-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 35px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(99, 102, 241, 0.1);
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+  }
+  
+  /* Glowing Digital Time Display */
+  .time-display {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #38bdf8;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 18px 10px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5),
+                0 0 20px rgba(56, 189, 248, 0.15);
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+  }
+  
+  .alarm-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  label {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    text-align: left;
+    font-weight: 500;
+  }
+  
+  /* Styled Time Input */
+  input[type="time"] {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+    color-scheme: dark; /* Dark mode style for calendar/time picker */
+  }
+  
+  input[type="time"]:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+  }
+  
+  /* Modern Gradient Buttons */
+  button {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  button#setAlarmBtn {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  }
+  
+  button#clearAlarmBtn {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+  }
+  
+  /* Animated Alert Badge */
+  #alarmMessage {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+    animation: pulse 1.5s infinite;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Subtle Pulsing Animation for Active Alarm */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+  }
